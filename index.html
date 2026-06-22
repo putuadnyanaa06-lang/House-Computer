@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Computer Bali - iPhone Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="brand-name">HOUSE COMPUTER BALI</div>
+    <div class="brand-sub">iPhone Specialist Service</div>
+  </div>
+  <div class="header-accent">
+    <div class="status-dot"></div>
+    <span class="status-text">OPEN</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>SERVIS <span>iPHONE</span> PROFESIONAL</h1>
+  <p>Garansi Resmi &nbsp;·&nbsp; Teknisi Berpengalaman &nbsp;·&nbsp; Spare Part Original</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="services-section">
+  <div class="section-label">Pilih Layanan</div>
+
+  <div class="services-grid">
+
+    <div class="service-card" onclick="bukaPanel('lcd')">
+      <span class="card-icon">📱</span>
+      <div class="card-title">GANTI LCD</div>
+      <div class="card-desc">Layar pecah, tidak responsif, dead pixel</div>
+    </div>
+
+    <div class="service-card" onclick="bukaPanel('batre')">
+      <span class="card-icon">🔋</span>
+      <div class="card-title">GANTI BATERAI</div>
+      <div class="card-desc">Baterai drop, cepat habis, auto shutdown</div>
+    </div>
+
+    <div class="service-card" onclick="bukaPanel('kamera')">
+      <span class="card-icon">📷</span>
+      <div class="card-title">GANTI KAMERA</div>
+      <div class="card-desc">Kamera buram, tidak fokus, error</div>
+    </div>
+
+    <div class="service-card" onclick="bukaPanel('lainnya')">
+      <span class="card-icon">🔧</span>
+      <div class="card-title">SERVICE LAINNYA</div>
+      <div class="card-desc">Speaker, mikrofon, charging port, tombol</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="price-panel" id="panel-lcd">
+  <div class="panel-header">
+    <span class="panel-title">📱 Harga Ganti LCD iPhone</span>
+    <button class="close-btn" onclick="tutupPanel('lcd')">✕</button>
+  </div>
+  <table class="price-table">
+    <tr><th>Model iPhone</th><th>Tipe LCD</th><th>Harga</th></tr>
+    <tr><td><span class="model-badge">iPhone 7 / 7+</span></td><td>Original OEM</td><td>Rp 350.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 8 / 8+</span></td><td>Original OEM</td><td>Rp 400.000</td></tr>
+    <tr><td><span class="model-badge">iPhone X</span></td><td>OLED Original</td><td>Rp 650.000</td></tr>
+    <tr><td><span class="model-badge">iPhone XR</span></td><td>LCD Original</td><td>Rp 550.000</td></tr>
+    <tr><td><span class="model-badge">iPhone XS / XS Max</span></td><td>OLED Original</td><td>Rp 850.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11</span></td><td>LCD Original</td><td>Rp 700.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11 Pro / Max</span></td><td>OLED Original</td><td>Rp 1.100.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 / 12 Mini</span></td><td>OLED Original</td><td>Rp 1.200.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 Pro / Max</span></td><td>OLED Original</td><td>Rp 1.500.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 / 13 Mini</span></td><td>OLED Original</td><td>Rp 1.400.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 Pro / Max</span></td><td>ProMotion OLED</td><td>Rp 2.000.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 / Plus</span></td><td>OLED Original</td><td>Rp 1.600.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 Pro / Max</span></td><td>Dynamic Island</td><td>Rp 2.500.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 / Plus</span></td><td>OLED Original</td><td>Rp 1.800.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 Pro / Max</span></td><td>ProMotion OLED</td><td>Rp 3.000.000</td></tr>
+  </table>
+</div>
+
+<div class="price-panel" id="panel-batre">
+  <div class="panel-header">
+    <span class="panel-title">🔋 Harga Ganti Baterai iPhone</span>
+    <button class="close-btn" onclick="tutupPanel('batre')">✕</button>
+  </div>
+  <table class="price-table">
+    <tr><th>Model iPhone</th><th>Kapasitas</th><th>Harga</th></tr>
+    <tr><td><span class="model-badge">iPhone 7 / 7+</span></td><td>1960 / 2900 mAh</td><td>Rp 180.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 8 / 8+</span></td><td>1821 / 2675 mAh</td><td>Rp 200.000</td></tr>
+    <tr><td><span class="model-badge">iPhone X</span></td><td>2716 mAh</td><td>Rp 250.000</td></tr>
+    <tr><td><span class="model-badge">iPhone XR</span></td><td>2942 mAh</td><td>Rp 280.000</td></tr>
+    <tr><td><span class="model-badge">iPhone XS / XS Max</span></td><td>2658 / 3174 mAh</td><td>Rp 300.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11</span></td><td>3110 mAh</td><td>Rp 320.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11 Pro / Max</span></td><td>3046 / 3969 mAh</td><td>Rp 380.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 / Mini</span></td><td>2815 / 2227 mAh</td><td>Rp 350.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 Pro / Max</span></td><td>2815 / 3687 mAh</td><td>Rp 420.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 / Mini</span></td><td>3227 / 2406 mAh</td><td>Rp 400.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 Pro / Max</span></td><td>3095 / 4352 mAh</td><td>Rp 480.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 / Plus</span></td><td>3279 / 4325 mAh</td><td>Rp 450.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 Pro / Max</span></td><td>3200 / 4323 mAh</td><td>Rp 550.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 / Plus</span></td><td>3349 / 4383 mAh</td><td>Rp 500.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 Pro / Max</span></td><td>3274 / 4422 mAh</td><td>Rp 600.000</td></tr>
+  </table>
+</div>
+
+<div class="price-panel" id="panel-kamera">
+  <div class="panel-header">
+    <span class="panel-title">📷 Harga Ganti Kamera iPhone</span>
+    <button class="close-btn" onclick="tutupPanel('kamera')">✕</button>
+  </div>
+  <table class="price-table">
+    <tr><th>Model iPhone</th><th>Kamera</th><th>Harga</th></tr>
+    <tr><td><span class="model-badge">iPhone 7 / 8</span></td><td>Belakang 12MP</td><td>Rp 250.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 7+ / 8+</span></td><td>Dual 12MP</td><td>Rp 350.000</td></tr>
+    <tr><td><span class="model-badge">iPhone X / XS</span></td><td>Dual 12MP TrueDepth</td><td>Rp 500.000</td></tr>
+    <tr><td><span class="model-badge">iPhone XR</span></td><td>Single 12MP</td><td>Rp 400.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11</span></td><td>Dual Wide + Ultra</td><td>Rp 600.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 11 Pro / Max</span></td><td>Triple 12MP</td><td>Rp 850.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 / Mini</span></td><td>Dual 12MP</td><td>Rp 700.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 12 Pro / Max</span></td><td>Triple LiDAR</td><td>Rp 1.100.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 / Mini</span></td><td>Dual 12MP Cinematic</td><td>Rp 800.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 13 Pro / Max</span></td><td>Triple ProRAW</td><td>Rp 1.300.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 / Plus</span></td><td>Dual 12MP</td><td>Rp 900.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 14 Pro / Max</span></td><td>Triple 48MP</td><td>Rp 1.600.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 / Plus</span></td><td>Dual 48MP</td><td>Rp 1.100.000</td></tr>
+    <tr><td><span class="model-badge">iPhone 15 Pro / Max</span></td><td>Triple 48MP Tetraprism</td><td>Rp 2.000.000</td></tr>
+  </table>
+</div>
+
+<div class="price-panel" id="panel-lainnya">
+  <div class="panel-header">
+    <span class="panel-title">🔧 Harga Service Lainnya</span>
+    <button class="close-btn" onclick="tutupPanel('lainnya')">✕</button>
+  </div>
+  <table class="price-table">
+    <tr><th>Jenis Service</th><th>Keterangan</th><th>Harga</th></tr>
+    <tr><td>Ganti Speaker</td><td>Suara kecil / tidak bunyi</td><td>Rp 150.000</td></tr>
+    <tr><td>Ganti Mikrofon</td><td>Suara tidak terdengar saat telepon</td><td>Rp 150.000</td></tr>
+    <tr><td>Ganti Charging Port</td><td>Tidak bisa di-charge</td><td>Rp 200.000</td></tr>
+    <tr><td>Ganti Tombol Power</td><td>Tombol macet / tidak berfungsi</td><td>Rp 180.000</td></tr>
+    <tr><td>Ganti Tombol Volume</td><td>Tombol rusak / copot</td><td>Rp 160.000</td></tr>
+    <tr><td>Ganti Back Cover</td><td>Casing belakang retak / pecah</td><td>Rp 250.000</td></tr>
+    <tr><td>Servis Mati Total</td><td>iPhone tidak menyala</td><td>Rp 300.000+</td></tr>
+    <tr><td>Recovery Data</td><td>Data terhapus / iPhone hang</td><td>Rp 350.000+</td></tr>
+    <tr><td>Unlock iCloud</td><td>Terkunci akun iCloud</td><td>Konsultasi</td></tr>
+    <tr><td>Servis Water Damage</td><td>iPhone kena air</td><td>Rp 250.000+</td></tr>
+  </table>
+</div>
+
+<footer>
+  &copy; 2024 <span>House Computer Bali</span> · iPhone Specialist · Denpasar, Bali
+</footer>
+
+<script>
+function bukaPanel(id) {
+  document.querySelectorAll('.price-panel').forEach(function(panel) {
+    panel.classList.remove('active');
+  });
+
+  var targetPanel = document.getElementById('panel-' + id);
+  if (targetPanel) {
+    targetPanel.classList.add('active');
+    setTimeout(function() {
+      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
+
+function tutupPanel(id) {
+  var panel = document.getElementById('panel-' + id);
+  if (panel) {
+    panel.classList.remove('active');
+  }
+}
+</script>
+
+</body>
+</html>

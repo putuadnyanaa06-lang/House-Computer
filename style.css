@@ -1,0 +1,351 @@
+/* ============================================
+   RESET & BASE - Menghapus style bawaan browser
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Warna dan font utama seluruh halaman */
+body {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER - Bagian atas halaman berisi logo & nama toko
+   ============================================ */
+header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 32px;
+  background: linear-gradient(180deg, #111 0%, #0a0a0a 100%);
+  border-bottom: 1px solid #1a2e1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo gambar toko */
+.logo-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0,255,80,0.4));
+}
+
+/* Teks nama toko di sebelah logo */
+.brand-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #00ff50;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  text-shadow: 0 0 20px rgba(0,255,80,0.3);
+}
+
+.brand-sub {
+  font-size: 12px;
+  color: #666;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Garis hijau dekoratif di pojok kanan header */
+.header-accent {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff50;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Animasi kedip pada dot status */
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px #00ff50; }
+  50% { opacity: 0.4; box-shadow: 0 0 2px #00ff50; }
+}
+
+.status-text {
+  font-size: 12px;
+  color: #00ff50;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   HERO SECTION - Banner utama halaman
+   ============================================ */
+.hero {
+  text-align: center;
+  padding: 48px 32px 32px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,255,80,0.06) 0%, transparent 60%);
+}
+
+.hero h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.hero h1 span {
+  color: #00ff50;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   DIVIDER - Garis pemisah antar section
+   ============================================ */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00ff50, transparent);
+  margin: 0 32px;
+  opacity: 0.3;
+}
+
+/* ============================================
+   MENU LAYANAN - Grid tombol pilihan layanan
+   ============================================ */
+.services-section {
+  padding: 40px 32px;
+}
+
+.section-label {
+  font-size: 11px;
+  color: #00ff50;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Garis pendek dekoratif di sebelah label */
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #1a3a1a, transparent);
+}
+
+/* Grid responsif untuk kartu layanan */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* ============================================
+   SERVICE CARD - Kartu yang bisa diklik
+   Menggunakan CSS transition untuk animasi hover
+   ============================================ */
+.service-card {
+  background: #111;
+  border: 1px solid #1c1c1c;
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease; /* Animasi halus saat hover */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek glow hijau di bagian atas kartu saat hover */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ff50, transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Saat kartu di-hover: border menyala dan kartu naik sedikit */
+.service-card:hover {
+  border-color: #00ff50;
+  transform: translateY(-4px);
+  background: #141414;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Ikon di tengah kartu */
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.card-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #444;
+}
+
+/* ============================================
+   PRICE TABLE - Tabel harga yang muncul saat kartu diklik
+   Menggunakan display:none / display:block untuk show/hide
+   ============================================ */
+.price-panel {
+  display: none; /* Tersembunyi secara default */
+  margin: 0 32px 40px;
+  background: #0d0d0d;
+  border: 1px solid #1a3a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease; /* Animasi muncul dari atas */
+}
+
+/* Animasi kartu harga turun saat muncul */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Saat panel aktif/visible */
+.price-panel.active {
+  display: block;
+}
+
+/* Header panel harga */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  background: #111;
+  border-bottom: 1px solid #1a2e1a;
+}
+
+.panel-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #00ff50;
+  letter-spacing: 1px;
+}
+
+/* Tombol X untuk menutup panel */
+.close-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  border-color: #00ff50;
+  color: #00ff50;
+}
+
+/* Tabel harga per model iPhone */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Baris tabel bergantian warna (zebra stripe) */
+.price-table tr:nth-child(even) {
+  background: #0f0f0f;
+}
+
+.price-table tr:hover {
+  background: #141f14;
+}
+
+.price-table th {
+  padding: 14px 28px;
+  text-align: left;
+  font-size: 11px;
+  color: #444;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.price-table td {
+  padding: 14px 28px;
+  font-size: 14px;
+  color: #ccc;
+  border-bottom: 1px solid #111;
+}
+
+/* Kolom harga selalu rata kanan dan berwarna hijau */
+.price-table td:last-child {
+  text-align: right;
+  color: #00ff50;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.model-badge {
+  display: inline-block;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ============================================
+   FOOTER - Bagian bawah halaman
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 32px;
+  border-top: 1px solid #111;
+  color: #333;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+footer span {
+  color: #00ff50;
+}
